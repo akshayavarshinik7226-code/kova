@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>KOVA · Deploy with confidence</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+<div class="app-shell" id="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/" aria-label="KOVA overview"><span class="brand-mark">K</span><span>KOVA</span><span class="brand-tag">BETA</span></a>
+    <div class="workspace-label">WORKSPACE</div>
+    <nav class="nav-list" aria-label="Main navigation">
+      <button class="nav-item active" data-page="overview"><span class="nav-icon">◫</span>Overview</button>
+      <button class="nav-item" data-page="projects"><span class="nav-icon">▣</span>Projects</button>
+      <button class="nav-item" data-page="deployments"><span class="nav-icon">↗</span>Deployments</button>
+      <button class="nav-item" data-page="templates"><span class="nav-icon">▤</span>Templates</button>
+      <button class="nav-item" data-page="analytics"><span class="nav-icon">▥</span>Analytics</button>
+    </nav>
+    <div class="workspace-label nav-gap">MANAGE</div>
+    <nav class="nav-list" aria-label="Management navigation">
+      <button class="nav-item" data-page="team" data-admin-only><span class="nav-icon">♧</span>Team</button>
+      <button class="nav-item" data-page="activity"><span class="nav-icon">◷</span>Activity</button>
+      <button class="nav-item" data-page="notifications"><span class="nav-icon">♧</span>Notifications</button>
+      <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+      <button class="nav-item" data-page="billing"><span class="nav-icon">◇</span>Usage & billing</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="help-card"><span class="help-dot"></span><div><strong>Need a hand?</strong><small>KOVA help centre</small></div><span>↗</span></div><div class="sidebar-foot">KOVA PLATFORM <span>v0.1.0</span></div></div>
+  </aside>
+  <section class="app-main">
+    <header class="topbar">
+      <button class="icon-btn mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+      <div class="crumb"><span>Workspace</span><b>/</b><strong id="page-crumb">Overview</strong></div>
+      <div class="top-actions"><label class="search-box"><span>⌕</span><input id="global-search" type="search" placeholder="Search anything..." aria-label="Search"></label><button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">◐</button><button class="icon-btn notification-btn" data-page="notifications" aria-label="Notifications">♧<i></i></button><div class="avatar" id="avatar">K</div><div class="profile"><strong id="profile-name">Account</strong><small id="profile-role">Student</small></div><button class="icon-btn" id="account-menu" aria-label="Account menu">⌄</button><button class="btn btn-outline signout" id="logout-btn">Sign out</button></div>
+    </header>
+    <main class="content" id="main" tabindex="-1"><div class="loading">Loading your workspace…</div></main>
+    <footer class="page-footer"><span>© 2026 KOVA. Built for what’s next.</span><span>Platform status <i class="status-dot"></i> Operational</span></footer>
+  </section>
+</div>
+<div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+<script src="{{ url_for('static', filename='js/api.js') }}"></script><script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body></html>
